@@ -1,0 +1,399 @@
+/* === L === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+    color: #ff0000;
+}
+
+/* === ENLACES === */
+a {
+    color: #e60000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Cabecera === */
+.cabecera {
+    background: #161616;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+}
+
+/* === Logo  */
+.nombre-empresa {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nombre-empresa img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.opciones-cabecera ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.opciones-cabecera li a {
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.opciones-cabecera li a:hover {
+    color: #e60000;
+}
+
+/* === Hero === */
+.hero-section {
+    background: url('https://i.ytimg.com/vi/IszbvSrqIeo/maxresdefault.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #e60000;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: #830000;
+}
+
+/* === Contenido principal === */
+.cuerpo-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.seccion-descubre {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.secondary-button {
+    display: inline-block;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.secondary-button:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+/* === Modelos === */
+.seccion-modelos {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    
+}
+
+.tarjeta-producto {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.opcion-comprar {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: auto;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.opcion-comprar:hover {
+    background: #e60000;
+}
+
+.precio-producto {
+    color: #e60000;
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.agendar-btn {
+    display: inline-block;
+    background-color: #e60000;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 1em;
+}
+
+.agendar-btn:hover {
+    background-color: #c00000;
+}
+
+/* ===  === */
+.prueba-modal, .prueba-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+}
+
+.prueba-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prueba-modal {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 3100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.prueba-modal h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.prueba-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.prueba-modal button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #e60000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prueba-modal button:hover {
+    background-color: #c00000;
+}
+
+.prueba-overlay.mostrar,
+.prueba-modal.mostrar {
+    display: block;
+}
+
+/* Videos */
+.media-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.media-container img,
+.media-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.media-container video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tarjeta-producto:hover .media-container video {
+  opacity: 1;
+}
+
+.tarjeta-producto:hover .media-container img {
+  opacity: 0;
+}
+
+
+/* === La vuelta del final === */
+.pie-pagina {
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 40px 30px;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-columna h4 {
+    color: #e60000;
+    margin-bottom: 15px;
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columna ul li a {
+    color: #bbb;
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.footer-columna ul li a:hover {
+    color: #e60000;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.redes-sociales a:hover {
+    background: #e60000;
+    border-color: #e60000;
+}
+
+
+/* === Fichas tecnicas == */
+.ficha-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    max-width: 400px;
+    display: none;
+}
+
+.ficha-modal.mostrar {
+    display: block;
+}
+
+.ficha-modal h4 {
+    margin-top: 0;
+}
+
+.ficha-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    display: none;
+}
+
+.ficha-overlay.mostrar {
+    display: block;
+}
